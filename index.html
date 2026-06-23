@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Juan Fakhri — HR Generalist berlatar Teknik Informatika. Portofolio Recruitment, Training & Development, serta proyek data & web development.">
+  <title>Juan Fakhri — HR Generalist & Data-Driven Developer</title>
+
+  <!-- Theme bootstrap: terapkan tema sebelum render untuk mencegah flicker -->
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('jf-theme');
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var isDark = stored ? stored === 'dark' : prefersDark;
+        if (isDark) document.documentElement.classList.add('dark');
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link href="dist/output.css" rel="stylesheet">
+</head>
+
+<body class="bg-bg text-ink antialiased transition-colors duration-300" style="font-family:'Plus Jakarta Sans', sans-serif;">
+
+  <!-- =============== HEADER =============== -->
+  <header class="fixed top-0 left-0 w-full z-50 border-b hairline backdrop-blur-md transition-colors duration-300" style="background-color: var(--bg); background-color: color-mix(in srgb, var(--bg) 82%, transparent);">
+    <div class="wrap flex items-center justify-between h-[72px]">
+      <a href="#beranda" class="font-display font-bold text-lg tracking-tight">
+        Juan<span class="text-accent">.</span>Fakhri
+      </a>
+
+      <nav id="nav-menu" class="hidden lg:flex items-center gap-7 text-sm">
+        <a href="#tentang" class="nav-link">Tentang</a>
+        <a href="#pengalaman" class="nav-link">Pengalaman</a>
+        <a href="#proyek-hr" class="nav-link">Proyek HR</a>
+        <a href="#proyek-teknis" class="nav-link">Proyek Teknis</a>
+        <a href="#keahlian" class="nav-link">Keahlian</a>
+        <a href="#kontak" class="nav-link">Kontak</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <!-- Signature shift toggle: Siang / Malam -->
+        <button id="theme-toggle" class="shift-toggle" aria-pressed="false" aria-label="Ganti tampilan Siang atau Malam">
+          <span class="knob" aria-hidden="true"></span>
+          <span class="seg seg-light"><i class="ri-sun-line"></i> SIANG</span>
+          <span class="seg seg-dark"><i class="ri-moon-clear-line"></i> MALAM</span>
+        </button>
+
+        <button id="hamburger" type="button" class="lg:hidden flex flex-col gap-[5px] p-2" aria-label="Buka menu navigasi" aria-expanded="false">
+          <span class="block w-5 h-[1.5px] bg-current"></span>
+          <span class="block w-5 h-[1.5px] bg-current"></span>
+          <span class="block w-5 h-[1.5px] bg-current"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- mobile nav -->
+    <nav id="mobile-menu" class="hidden lg:hidden border-t hairline">
+      <div class="wrap flex flex-col py-4 gap-3 text-sm">
+        <a href="#tentang" class="nav-link py-1">Tentang</a>
+        <a href="#pengalaman" class="nav-link py-1">Pengalaman</a>
+        <a href="#proyek-hr" class="nav-link py-1">Proyek HR</a>
+        <a href="#proyek-teknis" class="nav-link py-1">Proyek Teknis</a>
+        <a href="#keahlian" class="nav-link py-1">Keahlian</a>
+        <a href="#kontak" class="nav-link py-1">Kontak</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- =============== HERO =============== -->
+    <section id="beranda" class="relative pt-32 sm:pt-44 pb-16 sm:pb-24 overflow-hidden hero-glow">
+      <div class="wrap">
+        <div class="grid lg:grid-cols-[1.15fr_0.85fr] gap-14 items-center">
+          <div class="reveal">
+            <p class="eyebrow mb-5">EST. 2022 — SEKARANG · CIKARANG, INDONESIA</p>
+            <h1 class="font-display font-extrabold leading-[1.05] text-[2.6rem] sm:text-5xl lg:text-[3.4rem] tracking-tight">
+              Dari lini produksi,<br>
+              menuju meja <span class="text-accent">rekrutmen.</span>
+            </h1>
+            <p class="mt-6 max-w-lg text-[1.05rem] leading-relaxed" style="color: var(--soft);">
+              Saya <strong style="color:var(--ink)">Juan Fakhri</strong> — HR Generalist berlatar Teknik Informatika.
+              Saya merancang strategi Recruitment dan Training &amp; Development lewat studi kasus nyata,
+              didukung kebiasaan berpikir berbasis data dari latar belakang teknologi.
+            </p>
+
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a href="https://wa.me/6289662213888?text=Halo%20Juan%2C%20saya%20tertarik%20berdiskusi%20peluang%20HR." target="_blank" rel="noopener" class="btn-primary">
+                <i class="ri-whatsapp-line"></i> Hubungi via WhatsApp
+              </a>
+              <a href="#proyek-hr" class="btn-ghost">
+                <i class="ri-bar-chart-grouped-line"></i> Lihat Studi Kasus HR
+              </a>
+            </div>
+
+            <div class="mt-10 flex flex-wrap gap-x-6 gap-y-3">
+              <div>
+                <p class="font-mono text-xl font-semibold text-accent">7→15</p>
+                <p class="text-xs" style="color:var(--soft);">HC direncanakan</p>
+              </div>
+              <div>
+                <p class="font-mono text-xl font-semibold text-accent">44</p>
+                <p class="text-xs" style="color:var(--soft);">Karyawan direkrut / 12 minggu</p>
+              </div>
+              <div>
+                <p class="font-mono text-xl font-semibold text-accent">100</p>
+                <p class="text-xs" style="color:var(--soft);">Skor tertinggi mission</p>
+              </div>
+              <div>
+                <p class="font-mono text-xl font-semibold text-accent">3.68</p>
+                <p class="text-xs" style="color:var(--soft);">IPK Teknik Informatika</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative reveal">
+            <div class="relative mx-auto max-w-[340px]">
+              <img src="img/pasfoto.png" alt="Foto Juan Fakhri" class="relative z-10 w-full select-none">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============== TENTANG =============== -->
+    <section id="tentang" class="py-16 sm:py-24 border-t hairline">
+      <div class="wrap grid lg:grid-cols-[1.2fr_0.8fr] gap-14">
+        <div class="reveal">
+          <p class="eyebrow mb-4">Tentang Saya</p>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl tracking-tight mb-6 max-w-lg">
+            Berangkat dari Teknik Informatika, berlabuh di Human Resources.
+          </h2>
+          <p class="leading-relaxed mb-4" style="color:var(--soft);">
+            Saya lulusan Teknik Informatika Universitas Pelita Bangsa (IPK 3.68, lulus tepat waktu) yang mengarahkan
+            karier ke Human Resources — khususnya <em style="color:var(--ink); font-style:normal; font-weight:600;">Recruitment</em> dan
+            <em style="color:var(--ink); font-style:normal; font-weight:600;"> Training &amp; Development</em>. Pilihan ini tumbuh dari
+            pengalaman langsung berpindah dari satu lini operasional ke lini lain — material control, operator
+            printing, hingga admin operasional — yang justru mengajarkan bagaimana proses rekrutmen dan pengelolaan
+            SDM terasa dari sudut pandang karyawan yang menjalankannya.
+          </p>
+          <p class="leading-relaxed" style="color:var(--soft);">
+            Latar belakang teknik membentuk kebiasaan berpikir terstruktur dan berbasis data — yang saya bawa ke
+            dalam praktik HR: menyusun Manpower Planning dengan target kuantitatif, menghitung Take Home Pay dengan
+            akurasi komponen BPJS, hingga merancang Performance Management berbasis OKR yang terukur.
+          </p>
+        </div>
+
+        <div class="reveal">
+          <dl class="card divide-y hairline divide-line text-sm">
+            <div class="flex justify-between gap-4 px-5 py-4">
+              <dt class="font-mono text-xs" style="color:var(--soft);">PENDIDIKAN</dt>
+              <dd class="text-right font-medium">S1 Teknik Informatika<br>Universitas Pelita Bangsa</dd>
+            </div>
+            <div class="flex justify-between gap-4 px-5 py-4">
+              <dt class="font-mono text-xs" style="color:var(--soft);">FOKUS KARIER</dt>
+              <dd class="text-right font-medium">HR Generalist<br>Recruitment &amp; T&amp;D</dd>
+            </div>
+            <div class="flex justify-between gap-4 px-5 py-4">
+              <dt class="font-mono text-xs" style="color:var(--soft);">KREDENSIAL</dt>
+              <dd class="text-right font-medium">HR Bootcamp Batch 22<br>harisenin.com</dd>
+            </div>
+            <div class="flex justify-between gap-4 px-5 py-4">
+              <dt class="font-mono text-xs" style="color:var(--soft);">LOKASI</dt>
+              <dd class="text-right font-medium">Cikarang Selatan<br>Jawa Barat, Indonesia</dd>
+            </div>
+            <div class="flex justify-between gap-4 px-5 py-4">
+              <dt class="font-mono text-xs" style="color:var(--soft);">STATUS</dt>
+              <dd class="text-right font-medium text-accent">Terbuka untuk peluang HR</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============== PENGALAMAN / TIMELINE =============== -->
+    <section id="pengalaman" class="py-16 sm:py-24 border-t hairline">
+      <div class="wrap">
+        <p class="eyebrow mb-4">Perjalanan Profesional</p>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl tracking-tight mb-12 max-w-lg">
+          Lima peran, satu arah yang makin jelas.
+        </h2>
+
+        <div class="grid sm:grid-cols-[110px_1fr] gap-x-6">
+          <div class="hidden sm:flex flex-col items-end pr-2">
+            <span class="font-mono text-xs" style="color:var(--soft);">2025</span>
+          </div>
+          <div class="relative pl-6 sm:pl-8 pb-10 border-l hairline">
+            <span class="hidden sm:block absolute left-[-5px] top-1.5 rail-dot"></span>
+            <p class="font-mono text-xs mb-1" style="color:var(--accent);">MEI 2025 — SEKARANG</p>
+            <h3 class="font-semibold text-lg">Operator Warehouse</h3>
+            <p class="text-sm mb-2" style="color:var(--soft);">PT Shin Heung Indonesia · Cikarang Selatan</p>
+            <p class="text-sm leading-relaxed" style="color:var(--soft);">Mengoordinasikan pengelolaan gudang sebagai PIC Octa Core, mencatat keluar-masuk barang secara akurat, dan memastikan ketersediaan material untuk produksi harian.</p>
+          </div>
+
+          <div class="hidden sm:flex flex-col items-end pr-2">
+            <span class="font-mono text-xs" style="color:var(--soft);">2024</span>
+          </div>
+          <div class="relative pl-6 sm:pl-8 pb-10 border-l hairline">
+            <span class="hidden sm:block absolute left-[-5px] top-1.5 rail-dot"></span>
+            <p class="font-mono text-xs mb-1" style="color:var(--accent);">APR 2024 — APR 2025</p>
+            <h3 class="font-semibold text-lg">Operator Printing</h3>
+            <p class="text-sm mb-2" style="color:var(--soft);">PT Xuyuan Packaging Technology Indonesia · Cikarang Selatan</p>
+            <p class="text-sm leading-relaxed" style="color:var(--soft);">Mengoperasikan mesin Rotogravure Printing secara mandiri, menjaga kualitas hasil cetak sesuai standar, dan mengelola persediaan bahan cetak &amp; tinta.</p>
+          </div>
+
+          <div class="hidden sm:flex flex-col items-end pr-2">
+            <span class="font-mono text-xs" style="color:var(--soft);">2024</span>
+          </div>
+          <div class="relative pl-6 sm:pl-8 pb-10 border-l hairline">
+            <span class="hidden sm:block absolute left-[-5px] top-1.5 rail-dot"></span>
+            <p class="font-mono text-xs mb-1" style="color:var(--accent);">MAR 2024 — APR 2024</p>
+            <h3 class="font-semibold text-lg">Admin Operational</h3>
+            <p class="text-sm mb-2" style="color:var(--soft);">PT Bellagio Nusantara · Jakarta Pusat</p>
+            <p class="text-sm leading-relaxed" style="color:var(--soft);">Mengelola dokumen operasional (surat, faktur, laporan stok) pada sistem Accurate, serta berkoordinasi dengan gudang agar tagihan &amp; invoice klien tepat waktu.</p>
+          </div>
+
+          <div class="hidden sm:flex flex-col items-end pr-2">
+            <span class="font-mono text-xs" style="color:var(--soft);">2023</span>
+          </div>
+          <div class="relative pl-6 sm:pl-8 pb-10 border-l hairline">
+            <span class="hidden sm:block absolute left-[-5px] top-1.5 rail-dot"></span>
+            <p class="font-mono text-xs mb-1" style="color:var(--accent);">MEI 2023 — DES 2023</p>
+            <h3 class="font-semibold text-lg">Freelance Helper Admin Staff</h3>
+            <p class="text-sm mb-2" style="color:var(--soft);">PT Pratama Bangun Lestari · Cikarang Selatan</p>
+            <p class="text-sm leading-relaxed" style="color:var(--soft);">Merekap absensi &amp; inventaris aset perusahaan, mendistribusikan gaji manpower, serta membantu administrasi perpajakan PPN dan PPh Badan.</p>
+          </div>
+
+          <div class="hidden sm:flex flex-col items-end pr-2">
+            <span class="font-mono text-xs" style="color:var(--soft);">2022</span>
+          </div>
+          <div class="relative pl-6 sm:pl-8 border-l hairline">
+            <span class="hidden sm:block absolute left-[-5px] top-1.5 rail-dot"></span>
+            <p class="font-mono text-xs mb-1" style="color:var(--accent);">MAR 2022 — APR 2022</p>
+            <h3 class="font-semibold text-lg">Admin SDM (Magang)</h3>
+            <p class="text-sm mb-2" style="color:var(--soft);">Universitas Pelita Bangsa · Cikarang Selatan</p>
+            <p class="text-sm leading-relaxed" style="color:var(--soft);">Membangun Sistem Monitoring &amp; Evaluasi Penelitian kampus serta menganalisis performa website untuk mendukung insight manajemen Direktorat Penjaminan Mutu.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============== HR BOOTCAMP PROGRESSION =============== -->
+    <section class="py-16 sm:py-24 border-t hairline" style="background-color: var(--surface-2);">
+      <div class="wrap">
+        <p class="eyebrow mb-4">Alur Harisenin HR Bootcamp · Batch 22</p>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl tracking-tight mb-12 max-w-lg">
+          Tiga tingkatan, satu lompatan skor.
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="card p-6 lift reveal">
+            <p class="font-mono text-xs text-accent mb-3">BASIC</p>
+            <h3 class="font-semibold text-lg mb-2">5 Mission</h3>
+            <p class="text-sm leading-relaxed" style="color:var(--soft);">Skor tertinggi 100 untuk rangkuman regulasi ketenagakerjaan yang disusun secara kreatif dan komprehensif.</p>
+          </div>
+          <div class="card p-6 lift reveal">
+            <p class="font-mono text-xs text-accent mb-3">INTERMEDIATE</p>
+            <h3 class="font-semibold text-lg mb-2">TA &amp; T&amp;D Track</h3>
+            <p class="text-sm leading-relaxed" style="color:var(--soft);">Manpower Planning, proses interview, hingga Performance Management berbasis OKR.</p>
+          </div>
+          <div class="card p-6 lift reveal">
+            <p class="font-mono text-xs text-accent mb-3">ADVANCED</p>
+            <h3 class="font-semibold text-lg mb-2">Skor Tertinggi 83</h3>
+            <p class="text-sm leading-relaxed" style="color:var(--soft);">SOP Recruitment end-to-end dan rancangan Program Management Trainee &amp; Onboarding.</p>
+          </div>
+        </div>
+
+        <div class="mt-8 card p-6 reveal border-l-4" style="border-left-color: var(--accent);">
+          <p class="leading-relaxed italic" style="color:var(--soft);">
+            "Feedback mentor yang konsisten dan sistem revisi yang transparan membantu saya bertumbuh dari skor 69
+            hingga mencapai skor sempurna 100 di salah satu mission."
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============== PROYEK HR =============== -->
+    <section id="proyek-hr" class="py-16 sm:py-24 border-t hairline">
+      <div class="wrap">
+        <div class="flex flex-wrap items-end justify-between gap-4 mb-12">
+          <div>
+            <p class="eyebrow mb-4">Studi Kasus HR</p>
+            <h2 class="font-display font-bold text-3xl sm:text-4xl tracking-tight max-w-lg">
+              Enam mission, enam keputusan SDM yang terukur.
+            </h2>
+          </div>
+          <a href="https://github.com/JuanFakhri/hr-generalist-portfolio" target="_blank" rel="noopener" class="btn-ghost shrink-0">
+            <i class="ri-github-fill"></i> Dokumen Lengkap di GitHub
+          </a>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <article class="card p-6 lift reveal flex flex-col">
+            <a href="https://github.com/JuanFakhri/hr-generalist-portfolio" target="_blank" rel="noopener" class="flex flex-col flex-1 group">
+              <div class="flex items-center justify-between mb-4">
+                <span class="font-mono text-[0.65rem] tracking-widest text-accent">BASIC MISSION</span>
+                <span class="chip">SKOR 91</span>
+              </div>
+              <h3 class="font-semibold text-xl mb-2 group-hover:text-accent transition-colors">CV Screening &amp; Talent Analysis</h3>
+              <p class="text-sm leading-relaxed mb-5" style="color:var(--soft);">Membandingkan dua kandidat Front-End Developer secara objektif menggunakan kerangka MoSCoW terhadap job requirement &amp; job description.</p>
+              <div class="flex gap-2 mb-5">
+                <span class="chip">2 → 1 Kandidat</span>
+                <span class="chip">4 Aspek MoSCoW</span>
+              </div>
+              <div class="mt-auto flex flex-wrap gap-2 text-xs" style="color:var(--soft);">
+                <span class="chip">MoSCoW Method</span>
+                <span class="chip">Google Docs</span>
+                <span class="chip flex items-center gap-1"><i class="ri-github-fill"></i> Lihat di GitHub</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="card p-6 lift reveal flex flex-col">
+            <a href="https://github.com/JuanFakhri/hr-generalist-portfolio" target="_blank" rel="noopener" class="flex flex-col flex-1 group">
+              <div class="flex items-center justify-between mb-4">
+                <span class="font-mono text-[0.65rem] tracking-widest text-accent">BASIC MISSION</span>
+                <span class="chip">SKOR 80</span>
+              </div>
+              <h3 class="font-semibold text-xl mb-2 group-hover:text-accent transition-colors">Perhitungan THP &amp; Administrasi Kompensasi</h3>
+              <p class="text-sm leading-relaxed mb-5" style="color:var(--soft);">Menghitung Take Home Pay bersih lima karyawan dengan komponen iuran BPJS dan PPh 21 yang berbeda-beda per individu.</p>
+              <div class="flex gap-2 mb-5">
+                <span class="chip">5 Karyawan</span>
+                <span class="chip">4 Komponen BPJS</span>
+              </div>
+              <div class="mt-auto flex flex-wrap gap-2 text-xs" style="color:var(--soft);">
+                <span class="chip">Google Sheets</span>
+                <span class="chip">Regulasi BPJS</span>
+                <span class="chip flex items-center gap-1"><i class="ri-github-fill"></i> Lihat di GitHub</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="card p-6 lift reveal flex flex-col">
+            <a href="https://github.com/JuanFakhri/hr-generalist-portfolio" target="_blank" rel="noopener" class="flex flex-col flex-1 group">
+              <div class="flex items-center justify-between mb-4">
+                <span class="font-mono text-[0.65rem] tracking-widest text-accent">INTERMEDIATE MISSION</span>
+                <span class="chip">LEMONSQUEEZE</span>
+              </div>
+              <h3 class="font-semibold text-xl mb-2 group-hover:text-accent transition-colors">Strategic Manpower Planning</h3>
+              <p class="text-sm leading-relaxed mb-5" style="color:var(--soft);">Menyusun Annual Workforce Strategy 2026 untuk agensi digital, memetakan 15 posisi dari 7 karyawan existing dengan labor cost terkendali.</p>
+              <div class="flex gap-2 mb-5">
+                <span class="chip">7 → 15 HC</span>
+                <span class="chip">114% Growth</span>
+              </div>
+              <div class="mt-auto flex flex-wrap gap-2 text-xs" style="color:var(--soft);">
+                <span class="chip">Google Sheets</span>
+                <span class="chip">Google Slides</span>
+                <span class="chip">Riset Pasar</span>
+                <span class="chip flex items-center gap-1"><i class="ri-github-fill"></i> Lihat di GitHub</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="card p-6 lift reveal flex flex-col">
+            <a href="https://github.com/JuanFakhri/hr-generalist-portfolio" target="_blank" rel="noopener" class="flex flex-col flex-1 group">
+              <div class="flex items-center justify-between mb-4">
+                <span class="font-mono text-[0.65rem] tracking-widest text-accent">INTERMEDIATE MISSION</span>
+                <span class="chip">SKOR 78.75</span>
+              </div>
+              <h3 class="font-semibold text-xl mb-2 group-hover:text-accent transition-colors">Performance Management &amp; OKR Framework</h3>
+              <p class="text-sm leading-relaxed mb-5" style="color:var(--soft);">Merancang Google-Style OKR Review Template lengkap dengan status traffic light dan development plan per karyawan.</p>
+              <div class="flex gap-2 mb-5">
+                <span class="chip">3 Objectives</span>
+                <span class="chip">9 Key Results</span>
+              </div>
+              <div class="mt-auto flex flex-wrap gap-2 text-xs" style="color:var(--soft);">
+                <span class="chip">Google Sheets</span>
+                <span class="chip">Traffic Light Scoring</span>
+                <span class="chip flex items-center gap-1"><i class="ri-github-fill"></i> Lihat di GitHub</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="card p-6 lift reveal flex flex-col">
+            <a href="https://github.com/JuanFakhri/hr-generalist-portfolio" target="_blank" rel="noopener" class="flex flex-col flex-1 group">
+              <div class="flex items-center justify-between mb-4">
+                <span class="font-mono text-[0.65rem] tracking-widest text-accent">ADVANCED MISSION</span>
+                <span class="chip">SKOR 83</span>
+              </div>
+              <h3 class="font-semibold text-xl mb-2 group-hover:text-accent transition-colors">SOP &amp; Strategi Rekrutmen End-to-End</h3>
+              <p class="text-sm leading-relaxed mb-5" style="color:var(--soft);">PT Mie Pedas Raya — menyusun SOP rekrutmen dari sourcing hingga offering untuk kebutuhan 44 karyawan di dua outlet baru dalam 12 minggu.</p>
+              <div class="flex gap-2 mb-5">
+                <span class="chip">44 HC</span>
+                <span class="chip">12 Minggu</span>
+              </div>
+              <div class="mt-auto flex flex-wrap gap-2 text-xs" style="color:var(--soft);">
+                <span class="chip">Google Docs</span>
+                <span class="chip">Google Sheets</span>
+                <span class="chip">Riset Gaji 6+ Sumber</span>
+                <span class="chip flex items-center gap-1"><i class="ri-github-fill"></i> Lihat di GitHub</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="card p-6 lift reveal flex flex-col">
+            <a href="https://github.com/JuanFakhri/hr-generalist-portfolio" target="_blank" rel="noopener" class="flex flex-col flex-1 group">
+              <div class="flex items-center justify-between mb-4">
+                <span class="font-mono text-[0.65rem] tracking-widest text-accent">ADVANCED MISSION</span>
+                <span class="chip">TRAINING &amp; DEV</span>
+              </div>
+              <h3 class="font-semibold text-xl mb-2 group-hover:text-accent transition-colors">Program Management Trainee &amp; Onboarding</h3>
+              <p class="text-sm leading-relaxed mb-5" style="color:var(--soft);">PT Mie Pedas Raya — merancang program Management Trainee 12 bulan dengan kurikulum kompetensi, Gantt chart, dan klasifikasi talent PEPA.</p>
+              <div class="flex gap-2 mb-5">
+                <span class="chip">12 Bulan</span>
+                <span class="chip">5 Peserta</span>
+              </div>
+              <div class="mt-auto flex flex-wrap gap-2 text-xs" style="color:var(--soft);">
+                <span class="chip">Google Slides</span>
+                <span class="chip">Google Sheets</span>
+                <span class="chip">PEPA Framework</span>
+                <span class="chip flex items-center gap-1"><i class="ri-github-fill"></i> Lihat di GitHub</span>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============== PROYEK TEKNIS & DESAIN =============== -->
+    <section id="proyek-teknis" class="py-16 sm:py-24 border-t hairline">
+      <div class="wrap">
+        <p class="eyebrow mb-4">Proyek Teknis &amp; Desain</p>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl tracking-tight mb-4 max-w-lg">
+          Fondasi data &amp; web yang menopang cara kerja HR saya.
+        </h2>
+        <p class="max-w-2xl mb-12" style="color:var(--soft);">Sebelum terjun ke HR, saya membangun kebiasaan analitis lewat data science dan pengembangan web — kebiasaan yang sama yang sekarang saya pakai untuk merancang Manpower Planning dan dashboard rekrutmen.</p>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <article class="card overflow-hidden lift reveal">
+            <a href="https://mahou07-naivebayestest-app-w0j7d2.streamlit.app/" target="_blank" rel="noopener" class="block overflow-hidden">
+              <img src="img/portfolio/project-1.png" alt="Tampilan proyek Machine Learning Naive Bayes" class="w-full aspect-[4/3] object-cover">
+            </a>
+            <div class="p-5">
+              <span class="chip mb-3 inline-block">Python · ML</span>
+              <h3 class="font-semibold mb-1">Machine Learning Naive Bayes</h3>
+              <p class="text-sm leading-relaxed mb-3" style="color:var(--soft);">Model klasifikasi data berbasis Naive Bayes, di-deploy lewat Streamlit untuk diakses langsung dari browser.</p>
+              <a href="https://mahou07-naivebayestest-app-w0j7d2.streamlit.app/" target="_blank" rel="noopener" class="text-sm font-semibold text-accent inline-flex items-center gap-1">Lihat demo <i class="ri-arrow-right-up-line"></i></a>
+            </div>
+          </article>
+
+          <article class="card overflow-hidden lift reveal">
+            <a href="https://github.com/JuanFakhri/Auto-Machine" target="_blank" rel="noopener" class="block overflow-hidden">
+              <img src="img/portfolio/project-2.png" alt="Tampilan proyek Auto Machine Learning" class="w-full aspect-[4/3] object-cover">
+            </a>
+            <div class="p-5">
+              <span class="chip mb-3 inline-block">Python · AutoML</span>
+              <h3 class="font-semibold mb-1">Auto Machine Learning (AutoML)</h3>
+              <p class="text-sm leading-relaxed mb-3" style="color:var(--soft);">Eksplorasi AutoML untuk membangun model machine learning secara otomatis tanpa tuning manual berulang.</p>
+              <a href="https://github.com/JuanFakhri/Auto-Machine" target="_blank" rel="noopener" class="text-sm font-semibold text-accent inline-flex items-center gap-1">Lihat repo <i class="ri-arrow-right-up-line"></i></a>
+            </div>
+          </article>
+
+          <article class="card overflow-hidden lift reveal">
+            <a href="https://github.com/JuanFakhri/Mall_Customer_Segmentation_Data" target="_blank" rel="noopener" class="block overflow-hidden">
+              <img src="img/portfolio/project-3.png" alt="Tampilan proyek Mall Customer Segmentation" class="w-full aspect-[4/3] object-cover">
+            </a>
+            <div class="p-5">
+              <span class="chip mb-3 inline-block">Python · Data Science</span>
+              <h3 class="font-semibold mb-1">Mall Customer Segmentation</h3>
+              <p class="text-sm leading-relaxed mb-3" style="color:var(--soft);">Segmentasi pelanggan mal menggunakan teknik clustering untuk memetakan pola belanja.</p>
+              <a href="https://github.com/JuanFakhri/Mall_Customer_Segmentation_Data" target="_blank" rel="noopener" class="text-sm font-semibold text-accent inline-flex items-center gap-1">Lihat repo <i class="ri-arrow-right-up-line"></i></a>
+            </div>
+          </article>
+
+          <article class="card overflow-hidden lift reveal">
+            <a href="https://github.com/JuanFakhri/Default_Dataset_Klien_Kartu_Kredit" target="_blank" rel="noopener" class="block overflow-hidden">
+              <img src="img/portfolio/project-4.png" alt="Tampilan proyek Default Dataset Kartu Kredit" class="w-full aspect-[4/3] object-cover">
+            </a>
+            <div class="p-5">
+              <span class="chip mb-3 inline-block">Python · Analytics</span>
+              <h3 class="font-semibold mb-1">Default Dataset Kartu Kredit</h3>
+              <p class="text-sm leading-relaxed mb-3" style="color:var(--soft);">Analisis dan penggalian wawasan dari data risiko default pembayaran klien kartu kredit.</p>
+              <a href="https://github.com/JuanFakhri/Default_Dataset_Klien_Kartu_Kredit" target="_blank" rel="noopener" class="text-sm font-semibold text-accent inline-flex items-center gap-1">Lihat repo <i class="ri-arrow-right-up-line"></i></a>
+            </div>
+          </article>
+
+          <article class="card overflow-hidden lift reveal">
+            <a href="https://github.com/JuanFakhri/Sistem-Monev-Penelitian" target="_blank" rel="noopener" class="block overflow-hidden">
+              <img src="img/portfolio/project-5.png" alt="Tampilan Sistem Monev Penelitian" class="w-full aspect-[4/3] object-cover">
+            </a>
+            <div class="p-5">
+              <span class="chip mb-3 inline-block">Web Dev · Oracle APEX</span>
+              <h3 class="font-semibold mb-1">Sistem Monev Penelitian</h3>
+              <p class="text-sm leading-relaxed mb-3" style="color:var(--soft);">Sistem monitoring &amp; evaluasi penelitian untuk Direktorat Penjaminan Mutu, Universitas Pelita Bangsa.</p>
+              <a href="https://github.com/JuanFakhri/Sistem-Monev-Penelitian" target="_blank" rel="noopener" class="text-sm font-semibold text-accent inline-flex items-center gap-1">Lihat repo <i class="ri-arrow-right-up-line"></i></a>
+            </div>
+          </article>
+
+          <article class="card overflow-hidden lift reveal">
+            <div class="block overflow-hidden">
+              <img src="img/portfolio/project-6.png" alt="Studi desain UI/UX aplikasi streaming film" class="w-full aspect-[4/3] object-cover">
+            </div>
+            <div class="p-5">
+              <span class="chip mb-3 inline-block">Figma · UI/UX</span>
+              <h3 class="font-semibold mb-1">UI/UX Design — Aplikasi Streaming Film</h3>
+              <p class="text-sm leading-relaxed" style="color:var(--soft);">Studi desain antarmuka mobile app untuk pengalaman menonton film, dari wireframe hingga prototipe hi-fi di Figma.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============== KEAHLIAN =============== -->
+    <section id="keahlian" class="py-16 sm:py-24 border-t hairline" style="background-color: var(--surface-2);">
+      <div class="wrap">
+        <p class="eyebrow mb-4">Kompetensi</p>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl tracking-tight mb-12 max-w-lg">
+          Dua sisi yang saling melengkapi.
+        </h2>
+
+        <!-- HR competencies -->
+        <h3 class="font-display font-semibold text-xl mb-6">Kompetensi HR &amp; HRIS</h3>
+        <div class="grid md:grid-cols-3 gap-6 mb-8">
+          <div class="card p-6 reveal">
+            <div class="flex items-center gap-2 mb-4 text-accent"><i class="ri-user-search-line text-lg"></i><h4 class="font-semibold text-base" style="color:var(--ink);">Talent Acquisition</h4></div>
+            <ul class="text-sm space-y-2" style="color:var(--soft);">
+              <li>Manpower Planning</li>
+              <li>CV Screening &amp; Sourcing</li>
+              <li>SOP &amp; Guideline Wawancara</li>
+              <li>Interview Method (STAR, BEI/CBI)</li>
+              <li>Job Vacancy Brief &amp; Evaluation Form</li>
+            </ul>
+          </div>
+          <div class="card p-6 reveal">
+            <div class="flex items-center gap-2 mb-4 text-accent"><i class="ri-graduation-cap-line text-lg"></i><h4 class="font-semibold text-base" style="color:var(--ink);">Training &amp; Development</h4></div>
+            <ul class="text-sm space-y-2" style="color:var(--soft);">
+              <li>Kurikulum &amp; Silabus Pelatihan</li>
+              <li>Program Onboarding &amp; MT</li>
+              <li>Performance Management (OKR)</li>
+              <li>Klasifikasi Talent (PEPA)</li>
+              <li>Gantt Chart &amp; Learning Path Design</li>
+            </ul>
+          </div>
+          <div class="card p-6 reveal">
+            <div class="flex items-center gap-2 mb-4 text-accent"><i class="ri-wallet-3-line text-lg"></i><h4 class="font-semibold text-base" style="color:var(--ink);">Compensation &amp; Administrasi</h4></div>
+            <ul class="text-sm space-y-2" style="color:var(--soft);">
+              <li>Perhitungan THP &amp; BPJS (TK &amp; Kes)</li>
+              <li>Budgeting &amp; Labor Cost Control</li>
+              <li>Administrasi Dokumen SDM</li>
+              <li>Regulasi Ketenagakerjaan (PKWT/PKWTT)</li>
+              <li>Payroll &amp; Slip Gaji</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="reveal mb-20">
+          <p class="text-xs font-mono mb-3" style="color:var(--soft);">SISTEM HRIS YANG FAMILIAR DIOPERASIKAN</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="chip">Talenta (Mekari)</span>
+          </div>
+        </div>
+
+        <!-- Technical skills -->
+        <h3 class="font-display font-semibold text-xl mb-6">Keahlian Teknis &amp; Digital</h3>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="card p-6 reveal">
+            <h4 class="font-semibold text-base mb-4">Data &amp; Analytics</h4>
+            <div class="space-y-4">
+              <div>
+                <div class="flex justify-between text-sm mb-1.5"><span>Python (ML &amp; Data Science)</span><span class="font-mono text-xs text-accent">Advanced</span></div>
+                <div class="level-track"><div class="level-fill" style="width:100%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm mb-1.5"><span>Microsoft Excel</span><span class="font-mono text-xs text-accent">Advanced</span></div>
+                <div class="level-track"><div class="level-fill" style="width:100%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm mb-1.5"><span>Google Sheets</span><span class="font-mono text-xs text-accent">Advanced</span></div>
+                <div class="level-track"><div class="level-fill" style="width:100%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm mb-1.5"><span>Power BI &amp; Tableau</span><span class="font-mono text-xs text-accent">Basic</span></div>
+                <div class="level-track"><div class="level-fill" style="width:33%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm mb-1.5"><span>SQL &amp; Database</span><span class="font-mono text-xs text-accent">Intermediate</span></div>
+                <div class="level-track"><div class="level-fill" style="width:66%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card p-6 reveal">
+            <h4 class="font-semibold text-base mb-4">Web &amp; Design</h4>
+            <div class="space-y-4">
+              <div>
+                <div class="flex justify-between text-sm mb-1.5"><span>HTML / CSS / JavaScript</span><span class="font-mono text-xs text-accent">Intermediate</span></div>
+                <div class="level-track"><div class="level-fill" style="width:66%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm mb-1.5"><span>React.js</span><span class="font-mono text-xs text-accent">Basic</span></div>
+                <div class="level-track"><div class="level-fill" style="width:33%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm mb-1.5"><span>Figma &amp; Adobe XD</span><span class="font-mono text-xs text-accent">Intermediate</span></div>
+                <div class="level-track"><div class="level-fill" style="width:66%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm mb-1.5"><span>GIT</span><span class="font-mono text-xs text-accent">Intermediate</span></div>
+                <div class="level-track"><div class="level-fill" style="width:66%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm mb-1.5"><span>Canva &amp; Photoshop</span><span class="font-mono text-xs text-accent">Basic</span></div>
+                <div class="level-track"><div class="level-fill" style="width:33%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card p-6 reveal">
+            <h4 class="font-semibold text-base mb-4">Productivity &amp; Office</h4>
+            <div class="space-y-4">
+              <div>
+                <div class="flex justify-between text-sm mb-1.5"><span>Microsoft Office Suite</span><span class="font-mono text-xs text-accent">Advanced</span></div>
+                <div class="level-track"><div class="level-fill" style="width:100%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm mb-1.5"><span>Google Workspace</span><span class="font-mono text-xs text-accent">Advanced</span></div>
+                <div class="level-track"><div class="level-fill" style="width:100%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm mb-1.5"><span>Oracle APEX</span><span class="font-mono text-xs text-accent">Intermediate</span></div>
+                <div class="level-track"><div class="level-fill" style="width:66%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm mb-1.5"><span>Flutter / Dart</span><span class="font-mono text-xs text-accent">Basic</span></div>
+                <div class="level-track"><div class="level-fill" style="width:33%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm mb-1.5"><span>Java / C++</span><span class="font-mono text-xs text-accent">Basic</span></div>
+                <div class="level-track"><div class="level-fill" style="width:33%"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============== PENDIDIKAN & SERTIFIKASI =============== -->
+    <section id="pendidikan" class="py-16 sm:py-24 border-t hairline">
+      <div class="wrap grid md:grid-cols-2 gap-6">
+        <div class="card p-7 reveal">
+          <div class="flex items-center gap-2 mb-4 text-accent"><i class="ri-school-line text-lg"></i><h3 class="font-semibold text-base" style="color:var(--ink);">Pendidikan Formal</h3></div>
+          <p class="font-semibold mb-1">S1 Teknik Informatika</p>
+          <p class="text-sm mb-3" style="color:var(--soft);">Universitas Pelita Bangsa</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="chip">IPK 3.68</span>
+            <span class="chip">Lulus Tepat Waktu</span>
+            <span class="chip">Data Science · Web · Mobile</span>
+          </div>
+        </div>
+        <div class="card p-7 reveal">
+          <div class="flex items-center gap-2 mb-4 text-accent"><i class="ri-award-line text-lg"></i><h3 class="font-semibold text-base" style="color:var(--ink);">Sertifikasi &amp; Kredensial</h3></div>
+          <ul class="text-sm space-y-2.5" style="color:var(--soft);">
+            <li class="flex gap-2"><i class="ri-checkbox-circle-line text-accent mt-0.5"></i> HR Bootcamp Batch 22 — harisenin.com</li>
+            <li class="flex gap-2"><i class="ri-checkbox-circle-line text-accent mt-0.5"></i> Machine Learning &amp; Data Science — GitHub Portfolio</li>
+            <li class="flex gap-2"><i class="ri-checkbox-circle-line text-accent mt-0.5"></i> AutoML &amp; Customer Segmentation — Proyek Mandiri</li>
+            <li class="flex gap-2"><i class="ri-checkbox-circle-line text-accent mt-0.5"></i> Sistem Monev Penelitian — Kerja Praktek UPB</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============== QUOTE =============== -->
+    <section class="py-16 sm:py-24 border-t hairline">
+      <div class="wrap max-w-3xl text-center reveal">
+        <i class="ri-double-quotes-l text-3xl text-accent"></i>
+        <p class="font-display text-2xl sm:text-3xl leading-snug mt-4 mb-6">
+          Dari operator lini produksi menuju HR Generalist — perjalanan ini membuktikan bahwa latar belakang yang
+          berbeda adalah nilai tambah, bukan penghalang.
+        </p>
+        <p class="font-mono text-xs tracking-widest" style="color:var(--soft);">JUAN FAKHRI · #JADIYANGKAMUMAU</p>
+      </div>
+    </section>
+
+    <!-- =============== KONTAK =============== -->
+    <section id="kontak" class="py-16 sm:py-24 border-t hairline" style="background-color: var(--surface-2);">
+      <div class="wrap grid lg:grid-cols-[1.1fr_0.9fr] gap-12">
+        <div class="reveal">
+          <p class="eyebrow mb-4">Kontak</p>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl tracking-tight mb-4 max-w-md">Mari terhubung.</h2>
+          <p class="max-w-md mb-8" style="color:var(--soft);">Terbuka untuk peluang HR Generalist, HR Admin, serta kolaborasi proyek SDM dan data.</p>
+
+          <div class="space-y-3">
+            <a href="mailto:juanfakhri02@gmail.com" class="card flex items-center gap-4 p-4 lift">
+              <span class="w-10 h-10 rounded-full flex items-center justify-center text-accent" style="background-color: var(--surface-2);"><i class="ri-mail-line"></i></span>
+              <span>
+                <span class="block text-xs font-mono" style="color:var(--soft);">EMAIL</span>
+                <span class="block font-medium">juanfakhri02@gmail.com</span>
+              </span>
+            </a>
+            <a href="https://wa.me/6289662213888" target="_blank" rel="noopener" class="card flex items-center gap-4 p-4 lift">
+              <span class="w-10 h-10 rounded-full flex items-center justify-center text-accent" style="background-color: var(--surface-2);"><i class="ri-whatsapp-line"></i></span>
+              <span>
+                <span class="block text-xs font-mono" style="color:var(--soft);">WHATSAPP</span>
+                <span class="block font-medium">0896-6221-3888</span>
+              </span>
+            </a>
+            <a href="https://www.linkedin.com/in/juan-fakhri" target="_blank" rel="noopener" class="card flex items-center gap-4 p-4 lift">
+              <span class="w-10 h-10 rounded-full flex items-center justify-center text-accent" style="background-color: var(--surface-2);"><i class="ri-linkedin-fill"></i></span>
+              <span>
+                <span class="block text-xs font-mono" style="color:var(--soft);">LINKEDIN</span>
+                <span class="block font-medium">linkedin.com/in/juan-fakhri</span>
+              </span>
+            </a>
+            <a href="https://github.com/JuanFakhri" target="_blank" rel="noopener" class="card flex items-center gap-4 p-4 lift">
+              <span class="w-10 h-10 rounded-full flex items-center justify-center text-accent" style="background-color: var(--surface-2);"><i class="ri-github-fill"></i></span>
+              <span>
+                <span class="block text-xs font-mono" style="color:var(--soft);">GITHUB</span>
+                <span class="block font-medium">github.com/JuanFakhri</span>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <div class="card p-7 h-full flex flex-col">
+            <p class="font-mono text-[0.65rem] tracking-widest text-accent mb-3">STATUS KETERSEDIAAN</p>
+            <h3 class="font-display font-semibold text-xl mb-3">Siap berdiskusi peluang HR Generalist.</h3>
+            <p class="text-sm leading-relaxed mb-6" style="color:var(--soft);">Baik untuk peran penuh waktu, magang lanjutan, maupun kolaborasi proyek singkat seputar rekrutmen, training, atau data SDM — kirim pesan dan saya akan membalas secepatnya.</p>
+            <a href="https://wa.me/6289662213888?text=Halo%20Juan%2C%20saya%20tertarik%20berdiskusi%20peluang%20HR." target="_blank" rel="noopener" class="btn-primary mt-auto justify-center">
+              <i class="ri-whatsapp-line"></i> Kirim Pesan WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =============== FOOTER =============== -->
+  <footer class="py-14 border-t hairline">
+    <div class="wrap flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="text-center sm:text-left">
+        <p class="font-display font-bold text-lg">Juan<span class="text-accent">.</span>Fakhri</p>
+        <p class="text-sm" style="color:var(--soft);">HR Generalist · Recruitment &amp; Training Development</p>
+      </div>
+      <div class="flex items-center gap-4 text-lg">
+        <a href="https://github.com/JuanFakhri" target="_blank" rel="noopener" class="nav-link" aria-label="GitHub"><i class="ri-github-fill"></i></a>
+        <a href="https://www.linkedin.com/in/juan-fakhri" target="_blank" rel="noopener" class="nav-link" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+        <a href="https://wa.me/6289662213888" target="_blank" rel="noopener" class="nav-link" aria-label="WhatsApp"><i class="ri-whatsapp-line"></i></a>
+        <a href="mailto:juanfakhri02@gmail.com" class="nav-link" aria-label="Email"><i class="ri-mail-line"></i></a>
+      </div>
+      <p class="text-xs font-mono text-center sm:text-right" style="color:var(--soft);">© <span id="year"></span> Juan Fakhri</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

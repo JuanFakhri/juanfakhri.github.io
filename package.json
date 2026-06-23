@@ -1,0 +1,12 @@
+{
+  "name": "juan-fakhri-portfolio",
+  "version": "2.0.0",
+  "description": "Portofolio gabungan Juan Fakhri — HR Generalist & Data-Driven Developer. Tema Siang (light) / Malam (dark).",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.2"
+  }
+}
